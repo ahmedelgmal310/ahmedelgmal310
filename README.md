@@ -41,6 +41,15 @@ I build and secure delivery pipelines: containerized applications, CI/CD automat
 
 ## Featured work
 
+**[Serverless Image Processing Pipeline](https://github.com/ahmedelgmal310/Serverless-Image-Processing-Pipeline)** · [live demo](https://d3l1cbrdqvb1hz.cloudfront.net)
+
+Event-driven image service built only from managed AWS services: uploads land in S3, events are buffered in SQS, and a Step Functions workflow validates each image, creates three renditions in parallel with Lambda, watermarks one and records the result in DynamoDB. Images are served through CloudFront. The whole stack is one SAM/CloudFormation template that deploys with a single command.
+
+![AWS SAM](https://img.shields.io/badge/AWS_SAM-FF9900?style=flat&logo=amazonwebservices&logoColor=white)
+![Step Functions](https://img.shields.io/badge/Step_Functions-E7157B?style=flat&logo=amazonwebservices&logoColor=white)
+![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=flat&logo=awslambda&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
 **[codealpha_tasks](https://github.com/ahmedelgmal310/codealpha_tasks)**: DevOps internship projects
 
 | Project | Highlights |

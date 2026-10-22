@@ -4,7 +4,7 @@
 
 I build and secure delivery pipelines: containerized applications, CI/CD automation with security gates, Kubernetes workloads and cloud infrastructure. Before moving into DevOps I worked as a freelance full-stack developer (since 2021), so I know what developers need from a pipeline and what production troubleshooting looks like.
 
-- Currently: **DevOps Intern at [CodeAlpha](https://www.codealpha.tech)** (Oct - Nov 2026)
+- Currently: **DevOps Intern at [CodeAlpha](https://www.codealpha.tech)** (since Oct 2026)
 - Focus: DevSecOps, SAST / SCA / DAST in CI/CD, container security, OWASP Top 10
 - Open to Junior DevSecOps, DevOps, Cloud Support and DevSecOps Intern roles (on-site, hybrid or remote)
 
@@ -39,7 +39,31 @@ I build and secure delivery pipelines: containerized applications, CI/CD automat
 ![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=dotnet&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
 
+## Experience
+
+**DevOps Intern, [CodeAlpha](https://www.codealpha.tech)** · Remote · Oct 2026 - present
+- Jenkins Remoting with x86_64 and ARM64 agents over JNLP4/TLS, configured as code (JCasC + Job DSL)
+- Java 21 build automation with Gradle, JUnit 5, a JaCoCo coverage gate and a GitHub Actions → GHCR pipeline
+- Hardened Nginx container with health checks, monitoring and 13 automated smoke tests
+- Azure Pipelines CI/CD to ACR and App Service with Bicep
+
+**Freelance Developer & DevOps Support** · Self-employed · 2021 - present
+- Deployment, hosting and production troubleshooting for client web applications (Linux, DNS, HTTPS, MySQL, Docker)
+
 ## Featured work
+
+**[Aegis: end-to-end DevSecOps platform](https://github.com/ahmedelgmal310/aegis-devsecops)**
+
+Secures the full path from `git push` to a running pod. Code passes secret scanning, SAST, SCA and IaC gates; the image is built multi-arch, scanned, signed with Sigstore (keyless) and ships with a signed SBOM, a signed vulnerability report and SLSA provenance. In the cluster, Kyverno admits only images signed by this pipeline with no critical CVEs, Falco detects attacker behaviour at runtime, secrets are sealed, and Argo CD deploys from Git. Every release the pipeline attacks its own cluster and fails if anything gets through.
+
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Sigstore](https://img.shields.io/badge/Sigstore_cosign-2B2D42?style=flat&logo=sigstore&logoColor=white)
+![Kyverno](https://img.shields.io/badge/Kyverno-FF6B00?style=flat)
+![Falco](https://img.shields.io/badge/Falco-00AEC7?style=flat&logo=falco&logoColor=white)
+![Argo CD](https://img.shields.io/badge/Argo_CD-EF7B4D?style=flat&logo=argo&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat&logo=aqua&logoColor=white)
+![OWASP ZAP](https://img.shields.io/badge/OWASP_ZAP-000000?style=flat&logo=owasp&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 
 **[Serverless Image Processing Pipeline](https://github.com/ahmedelgmal310/Serverless-Image-Processing-Pipeline)** · [live demo](https://d3l1cbrdqvb1hz.cloudfront.net)
 
@@ -69,5 +93,5 @@ Other hands-on work: DevSecOps pipelines with Trivy image scanning and security 
 
 ## Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-elgmal-ab730a1b1/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-elgammal-ab730a1b1/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-elgamal.codlek.com-111111?style=flat&logo=googlechrome&logoColor=white)](https://elgamal.codlek.com)

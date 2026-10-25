@@ -35,8 +35,11 @@ I build and secure delivery pipelines: containerized applications, CI/CD automat
 
 **Development**
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=dotnet&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=expo&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
 
 ## Experience
@@ -48,13 +51,14 @@ I build and secure delivery pipelines: containerized applications, CI/CD automat
 - Azure Pipelines CI/CD to ACR and App Service with Bicep
 
 **Freelance Developer & DevOps Support** · Self-employed · 2021 - present
-- Deployment, hosting and production troubleshooting for client web applications (Linux, DNS, HTTPS, MySQL, Docker)
+- Built and run eight production SaaS and e-commerce platforms for clients in Saudi Arabia, Kuwait and Egypt ([see below](#production-client-work))
+- Deployment, hosting and production troubleshooting (Linux, DNS, HTTPS, MySQL, Docker), payment integrations (MyFatoorah, Tabby, Tamara) and app-store releases
 
 ## Featured work
 
 **[Aegis: end-to-end DevSecOps platform](https://github.com/ahmedelgmal310/aegis-devsecops)**
 
-Secures the full path from `git push` to a running pod. Code passes secret scanning, SAST, SCA and IaC gates; the image is built multi-arch, scanned, signed with Sigstore (keyless) and ships with a signed SBOM, a signed vulnerability report and SLSA provenance. In the cluster, Kyverno admits only images signed by this pipeline with no critical CVEs, Falco detects attacker behaviour at runtime, secrets are sealed, and Argo CD deploys from Git. Every release the pipeline attacks its own cluster and fails if anything gets through.
+Secures the full path from `git push` to a running pod. Code passes secret scanning, SAST, SCA and IaC gates; the image is built multi-arch, scanned, signed with Sigstore (keyless) and ships with a signed SBOM, a signed vulnerability report and SLSA provenance. In the cluster, Kyverno admits only images signed by this pipeline with no critical CVEs, Falco detects attacker behaviour at runtime, secrets are sealed, and Argo CD deploys from Git. When Falco catches an attack, a Go incident responder isolates the pod within milliseconds, preserves the evidence and lets Kubernetes replace it. Every release the pipeline attacks its own cluster and fails if anything gets through.
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 ![Sigstore](https://img.shields.io/badge/Sigstore_cosign-2B2D42?style=flat&logo=sigstore&logoColor=white)
@@ -84,6 +88,21 @@ Event-driven image service built only from managed AWS services: uploads land in
 | [Web server in Docker](https://github.com/ahmedelgmal310/codealpha_tasks/tree/main/CodeAlpha_Docker_Web_Server) | Hardened Nginx container, health checks, monitoring and smoke tests |
 
 Other hands-on work: DevSecOps pipelines with Trivy image scanning and security gates, Kubernetes deployments on kind (probes, rolling updates, ConfigMaps/Secrets, Helm), and AWS networking (VPC, subnets, security groups, EC2, RDS, IAM).
+
+## Production client work
+
+Platforms I built and run for clients, live in production with real users and payments. The source code is private; the links go to the live products.
+
+| Product | What it is | Stack |
+|---|---|---|
+| **[Muallim+](https://taleemzaki.com)** | AI-powered multi-tenant education SaaS for teachers and students in Kuwait, Saudi Arabia and Egypt: AI exam and lesson builders grounded in the curriculum, live quizzes, adaptive practice, per-country billing | Laravel 13, Inertia, React 19, MariaDB |
+| **[Taaqod](https://contract-sa.com)** | Contract management SaaS for healthcare staffing: e-signatures, approval engine, budgets, 77-permission RBAC, SaaS and Ed25519-licensed self-hosted editions | PHP 8.3, React 19, MySQL |
+| **[Takamul Plus](https://takamul-plus.com)** | Modular HR, payroll and finance suite: recruitment, attendance, payroll posted to double-entry accounting, approvals and forms engines | React 19, PHP, MySQL |
+| **[Hasybat](https://hasybat.com)** | Cloud accounting: ZATCA e-invoicing, VAT, inventory at weighted average cost, automatic ledger | React 19, PHP, MySQL |
+| **[Koswmat](https://koswmat.com)** | Deals and appointments marketplace with QR tickets, four role-based panels and an iOS/Android app | Expo / React Native, React, PHP |
+| **[2B Store](https://2b-sa.com)** | E-commerce platform: storefront, 30-screen admin dashboard and native app on the App Store and Google Play | React, Expo, PHP, MySQL |
+| **[Bazzar 3D](https://bazzar3d.com)** | Interior design and 3D visualization platform: quotes, bookings, BNPL payments, admin panel | React 19, PHP, MySQL |
+| **[Saba Design](https://saba-design.com)** | Design-services storefront with cart, payments, abandoned-cart recovery and a partner API | React 19, PHP, MySQL |
 
 ## Certifications & education
 

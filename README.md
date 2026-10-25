@@ -95,7 +95,7 @@ Platforms I built and run for clients, live in production with real users and pa
 
 | Product | What it is | Stack |
 |---|---|---|
-| **[Muallim+](https://taleemzaki.com)** | AI-powered multi-tenant education SaaS for teachers and students in Kuwait, Saudi Arabia and Egypt: AI exam and lesson builders grounded in the curriculum, live quizzes, adaptive practice, per-country billing | Laravel 13, Inertia, React 19, MariaDB |
+| **[Taleem Zaki (Muallim+)](https://taleemzaki.com)** | AI-powered multi-tenant education SaaS for teachers and students in Kuwait, Saudi Arabia and Egypt: AI exam and lesson builders grounded in the curriculum, live quizzes, adaptive practice, per-country billing | Laravel 13, Inertia, React 19, MariaDB |
 | **[Taaqod](https://contract-sa.com)** | Contract management SaaS for healthcare staffing: e-signatures, approval engine, budgets, 77-permission RBAC, SaaS and Ed25519-licensed self-hosted editions | PHP 8.3, React 19, MySQL |
 | **[Takamul Plus](https://takamul-plus.com)** | Modular HR, payroll and finance suite: recruitment, attendance, payroll posted to double-entry accounting, approvals and forms engines | React 19, PHP, MySQL |
 | **[Hasybat](https://hasybat.com)** | Cloud accounting: ZATCA e-invoicing, VAT, inventory at weighted average cost, automatic ledger | React 19, PHP, MySQL |

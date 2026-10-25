@@ -69,6 +69,17 @@ Secures the full path from `git push` to a running pod. Code passes secret scann
 ![OWASP ZAP](https://img.shields.io/badge/OWASP_ZAP-000000?style=flat&logo=owasp&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 
+**[Sieve: vulnerability triage that tells you what to fix first](https://github.com/ahmedelgmal310/sieve)** · [live dashboard](https://ahmedelgmal310.github.io/sieve/)
+
+A daily pipeline that scans seven container images with Trivy and ranks every finding by real-world exploitation: CISA KEV (exploited in the wild), FIRST EPSS (probability of exploitation) and OpenVEX decisions for what does not affect us. Each vulnerability gets a priority and a remediation deadline measured from the day it was first seen. On the first run, 21,864 raw findings came down to 32 vulnerabilities that matter (99.5% of the noise removed). Sieve opens and closes one GitHub issue per urgent vulnerability, uploads SARIF to code scanning, publishes the dashboard on GitHub Pages, exports every suppression as OpenVEX, and blocks releases of my own images on any P0. Written in Go with zero third-party dependencies and 94% test coverage.
+
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat&logo=aqua&logoColor=white)
+![CISA KEV](https://img.shields.io/badge/CISA_KEV-B91C1C?style=flat)
+![EPSS](https://img.shields.io/badge/EPSS-C2410C?style=flat)
+![OpenVEX](https://img.shields.io/badge/OpenVEX-0369A1?style=flat)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+
 **[Serverless Image Processing Pipeline](https://github.com/ahmedelgmal310/Serverless-Image-Processing-Pipeline)** · [live demo](https://d3l1cbrdqvb1hz.cloudfront.net)
 
 Event-driven image service built only from managed AWS services: uploads land in S3, events are buffered in SQS, and a Step Functions workflow validates each image, creates three renditions in parallel with Lambda, watermarks one and records the result in DynamoDB. Images are served through CloudFront. The whole stack is one SAM/CloudFormation template that deploys with a single command.

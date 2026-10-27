@@ -14,6 +14,12 @@ I build and secure delivery pipelines: containerized applications, CI/CD automat
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat&logo=microsoftazure&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
+
+**Observability**
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat&logo=opentelemetry&logoColor=white)
 
 **Containers & orchestration**
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
@@ -79,6 +85,23 @@ A daily pipeline that scans seven container images with Trivy and ranks every fi
 ![EPSS](https://img.shields.io/badge/EPSS-C2410C?style=flat)
 ![OpenVEX](https://img.shields.io/badge/OpenVEX-0369A1?style=flat)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+
+**Platform engineering**: each project is proven end to end in CI, and the numbers below come from those runs.
+
+| Project | What it proves |
+|---|---|
+| [Lighthouse: SLO-based observability](https://github.com/ahmedelgmal310/sre-observability-slo) | Three Go services instrumented with OpenTelemetry, with metrics, traces and logs linked by trace ID in Prometheus, Tempo, Loki and Grafana. Multi-window burn-rate alerts on a 99.9% SLO. A chaos test injects errors two hops deep, and CI checks that the page fires (at 120 s, burn rate 26.6x). |
+| [Progressive delivery on Kubernetes](https://github.com/ahmedelgmal310/k8s-progressive-delivery) | Argo Rollouts canary (10% → 50% → 100%) gated by Prometheus analysis. CI ships a good release (promoted in 164 s) and a bad one, which is aborted in 49 s and fully rolled back in 56 s with zero errors afterwards. GitOps promotion dev → staging → prod; images are signed with cosign. |
+| [Terraform AWS platform](https://github.com/ahmedelgmal310/terraform-aws-platform) | Five reusable modules (VPC, secure S3, GitHub OIDC, RDS Postgres, ECS Fargate) and three environments. CI applies and destroys 74 resources on LocalStack, and 40 OPA policy rules check every plan. Checkov: 272 passed, 0 failed. |
+| [Ansible Linux hardening](https://github.com/ahmedelgmal310/ansible-linux-hardening) | Eight roles mapped to 92 CIS controls, tested with Molecule on Ubuntu, Debian 12/13, Rocky and Alma. The Lynis score rises from 62 to 83, and a second run makes 0 changes. Real SSH logins verify the result. |
+
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat&logo=opentelemetry&logoColor=white)
+![Argo Rollouts](https://img.shields.io/badge/Argo_Rollouts-EF7B4D?style=flat&logo=argo&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat&logo=terraform&logoColor=white)
+![OPA](https://img.shields.io/badge/OPA-7D9199?style=flat&logo=openpolicyagent&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
 
 **[Serverless Image Processing Pipeline](https://github.com/ahmedelgmal310/Serverless-Image-Processing-Pipeline)** · [live demo](https://d3l1cbrdqvb1hz.cloudfront.net)
 

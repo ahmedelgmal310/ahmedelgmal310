@@ -94,6 +94,10 @@ A daily pipeline that scans seven container images with Trivy and ranks every fi
 | [Progressive delivery on Kubernetes](https://github.com/ahmedelgmal310/k8s-progressive-delivery) | Argo Rollouts canary (10% → 50% → 100%) gated by Prometheus analysis. CI ships a good release (promoted in 164 s) and a bad one, which is aborted in 49 s and fully rolled back in 56 s with zero errors afterwards. GitOps promotion dev → staging → prod; images are signed with cosign. |
 | [Terraform AWS platform](https://github.com/ahmedelgmal310/terraform-aws-platform) | Five reusable modules (VPC, secure S3, GitHub OIDC, RDS Postgres, ECS Fargate) and three environments. CI applies and destroys 74 resources on LocalStack, and 40 OPA policy rules check every plan. Checkov: 272 passed, 0 failed. |
 | [Ansible Linux hardening](https://github.com/ahmedelgmal310/ansible-linux-hardening) | Eight roles mapped to 92 CIS controls, tested with Molecule on Ubuntu, Debian 12/13, Rocky and Alma. The Lynis score rises from 62 to 83, and a second run makes 0 changes. Real SSH logins verify the result. |
+| [Vault secrets platform](https://github.com/ahmedelgmal310/vault-secrets-platform) | A 3-node Vault cluster on Kubernetes, configured with Terraform. The service holds no stored secrets: dynamic PostgreSQL credentials expire after 20 s and are rotated, and short-lived TLS certificates come from Vault PKI. External Secrets Operator syncs a rotated secret in 4.3 s. 22/22 access tests pass, and a new leader is elected 6.5 s after the active node is lost. |
+| [Kubernetes disaster recovery](https://github.com/ahmedelgmal310/k8s-disaster-recovery) | Velero and CloudNativePG with continuous WAL archiving to encrypted object storage. Three DR drills run in CI and every row is verified after restore: a deleted namespace (RTO 41 s), a `DELETE` without `WHERE` recovered to a point in time (RTO 51 s, RPO 0.06 s), and total cluster loss (RTO 186 s). |
+| [Zero-trust service mesh](https://github.com/ahmedelgmal310/zero-trust-service-mesh) | Istio with strict mTLS, identity-based authorization (method and path), JWT at the ingress, NetworkPolicies and egress control. A 21-case policy conformance matrix runs in CI. Certificates rotate every 2 minutes with 0 failed requests, and the mesh adds about 1 ms of latency. |
+| [Event-driven autoscaling](https://github.com/ahmedelgmal310/k8s-event-driven-autoscaling) | KEDA scales an API on CPU and requests/s, and scales a Redis Streams worker from zero. The API went 2 → 7 → 2 replicas over 54,000 requests with 0 failures. A burst of 4,000 jobs was drained in 13.7 s, then the workers went back to 0. A node drain under load dropped no requests. |
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
@@ -102,6 +106,10 @@ A daily pipeline that scans seven container images with Trivy and ranks every fi
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat&logo=terraform&logoColor=white)
 ![OPA](https://img.shields.io/badge/OPA-7D9199?style=flat&logo=openpolicyagent&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
+![Vault](https://img.shields.io/badge/Vault-FFEC6E?style=flat&logo=vault&logoColor=black)
+![Istio](https://img.shields.io/badge/Istio-466BB0?style=flat&logo=istio&logoColor=white)
+![Velero](https://img.shields.io/badge/Velero-1F2937?style=flat)
+![KEDA](https://img.shields.io/badge/KEDA-0B5394?style=flat)
 
 **[Serverless Image Processing Pipeline](https://github.com/ahmedelgmal310/Serverless-Image-Processing-Pipeline)** · [live demo](https://d3l1cbrdqvb1hz.cloudfront.net)
 

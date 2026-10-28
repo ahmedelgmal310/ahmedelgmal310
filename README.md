@@ -98,6 +98,10 @@ A daily pipeline that scans seven container images with Trivy and ranks every fi
 | [Kubernetes disaster recovery](https://github.com/ahmedelgmal310/k8s-disaster-recovery) | Velero and CloudNativePG with continuous WAL archiving to encrypted object storage. Three DR drills run in CI and every row is verified after restore: a deleted namespace (RTO 41 s), a `DELETE` without `WHERE` recovered to a point in time (RTO 51 s, RPO 0.06 s), and total cluster loss (RTO 186 s). |
 | [Zero-trust service mesh](https://github.com/ahmedelgmal310/zero-trust-service-mesh) | Istio with strict mTLS, identity-based authorization (method and path), JWT at the ingress, NetworkPolicies and egress control. A 21-case policy conformance matrix runs in CI. Certificates rotate every 2 minutes with 0 failed requests, and the mesh adds about 1 ms of latency. |
 | [Event-driven autoscaling](https://github.com/ahmedelgmal310/k8s-event-driven-autoscaling) | KEDA scales an API on CPU and requests/s, and scales a Redis Streams worker from zero. The API went 2 → 7 → 2 replicas over 54,000 requests with 0 failures. A burst of 4,000 jobs was drained in 13.7 s, then the workers went back to 0. A node drain under load dropped no requests. |
+| [Golden-path CI](https://github.com/ahmedelgmal310/golden-path-ci) | A versioned library of 6 reusable GitHub Actions workflows (Go, Node, container image, Helm, Terraform, security baseline). 78 lines of consumer YAML reuse 1,649 lines of library. Images are signed with cosign and get an SBOM and SLSA provenance. A meta-test proves the gates bite: a planted key, a vulnerable base image and unformatted Terraform each fail at the expected step (3/3). A warm cache makes the Go pipeline 64% faster. |
+| [Zero-downtime database migrations](https://github.com/ahmedelgmal310/zero-downtime-migrations) | A column split with expand → backfill → contract across three app versions, including a rollback in the middle, under constant load: 11,229 requests with 0 failed and a worst p95 of 1.8 ms. 200,329 rows backfilled in batches at 4,703 rows/s. No acknowledged write was lost, and a guard refuses the contract while old pods are still running. |
+| [Multi-tenant Kubernetes](https://github.com/ahmedelgmal310/k8s-multi-tenancy) | Tenant onboarding with Kyverno: each team gets RBAC, quotas, a LimitRange and default-deny network policies in under a second. A 63-case tenancy conformance matrix passes, and each denial is checked to come from the right layer. A noisy neighbour is capped by quota while the other team serves 300 requests with 0 failures. A deleted policy comes back in 0.13 s. |
+| [Crossplane self-service platform](https://github.com/ahmedelgmal310/crossplane-self-service) | One `AppEnvironment` resource gives a team a namespace with quota and network policy, a PostgreSQL database with its credentials, and the app itself. A small environment is ready in 12.2 s, and one with a database in 31 s. Invalid requests are rejected at admission (5/5). Drift is corrected in 0.1 to 4.3 s, and deleting the environment leaves 0 orphaned resources. Tuning Crossplane's watch circuit breaker halved the time to ready. |
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
@@ -110,6 +114,9 @@ A daily pipeline that scans seven container images with Trivy and ranks every fi
 ![Istio](https://img.shields.io/badge/Istio-466BB0?style=flat&logo=istio&logoColor=white)
 ![Velero](https://img.shields.io/badge/Velero-1F2937?style=flat)
 ![KEDA](https://img.shields.io/badge/KEDA-0B5394?style=flat)
+![Kyverno](https://img.shields.io/badge/Kyverno-FF6F00?style=flat)
+![Crossplane](https://img.shields.io/badge/Crossplane-35D0BA?style=flat)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 **[Serverless Image Processing Pipeline](https://github.com/ahmedelgmal310/Serverless-Image-Processing-Pipeline)** · [live demo](https://d3l1cbrdqvb1hz.cloudfront.net)
 

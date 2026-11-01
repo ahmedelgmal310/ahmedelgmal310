@@ -1,6 +1,6 @@
 # Hi, I'm Ahmed Elgammal
 
-**Junior DevSecOps Engineer** · AWS Certified Cloud Practitioner · Cairo, Egypt
+**Junior DevSecOps Engineer** · AWS Certified Solutions Architect – Associate · Cairo, Egypt
 
 I build and secure delivery pipelines: containerized applications, CI/CD automation with security gates, Kubernetes workloads and cloud infrastructure. Before moving into DevOps I worked as a freelance full-stack developer (since 2021), so I know what developers need from a pipeline and what production troubleshooting looks like.
 
@@ -155,6 +155,7 @@ Platforms I built and run for clients, live in production with real users and pa
 
 ## Certifications & education
 
+- **AWS Certified Solutions Architect – Associate**, Amazon Web Services (Nov 2026)
 - **AWS Certified Cloud Practitioner**, Amazon Web Services (Sep 2026)
 - **Full-Stack Web Development using .NET**, Information Technology Institute (ITI), 120 hours
 - **B.Eng. Communication and Computer Engineering**, Mansoura University (2019 - 2024), GPA 3.57 / 4.00

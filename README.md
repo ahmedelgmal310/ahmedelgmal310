@@ -1,6 +1,6 @@
 # Hi, I'm Ahmed Elgammal
 
-**Junior DevSecOps Engineer** · AWS Certified Solutions Architect – Associate · Cairo, Egypt
+**Junior DevSecOps Engineer** · 2x AWS Certified (Solutions Architect – Associate, Cloud Practitioner) · Cairo, Egypt
 
 I build and secure delivery pipelines: containerized applications, CI/CD automation with security gates, Kubernetes workloads and cloud infrastructure. Before moving into DevOps I worked as a freelance full-stack developer (since 2021), so I know what developers need from a pipeline and what production troubleshooting looks like.
 

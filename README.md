@@ -1,12 +1,12 @@
 # Hi, I'm Ahmed Elgammal
 
-**Junior DevSecOps Engineer** · 2x AWS Certified (Solutions Architect – Associate, Cloud Practitioner) · Cairo, Egypt
+**DevOps Engineer** · Kubernetes · CI/CD · Terraform · AWS · Cairo, Egypt
 
-I build and secure delivery pipelines: containerized applications, CI/CD automation with security gates, Kubernetes workloads and cloud infrastructure. Before moving into DevOps I worked as a freelance full-stack developer (since 2021), so I know what developers need from a pipeline and what production troubleshooting looks like.
+I build and run CI/CD pipelines, Kubernetes platforms and cloud infrastructure on AWS, and I prove that each one works: every project here ships with a CI run that measures it. Since 2021 I have also deployed and maintained eight production SaaS and e-commerce platforms for clients in Saudi Arabia, Kuwait and Egypt, so I know what production troubleshooting looks like.
 
-- Currently: **DevOps Intern at [CodeAlpha](https://www.codealpha.tech)** (since Oct 2026)
-- Focus: DevSecOps, SAST / SCA / DAST in CI/CD, container security, OWASP Top 10
-- Open to Junior DevSecOps, DevOps, Cloud Support and DevSecOps Intern roles (on-site, hybrid or remote)
+- Focus: CI/CD automation, Kubernetes and GitOps, infrastructure as code, monitoring and reliability
+- 2x AWS Certified: Solutions Architect – Associate and Cloud Practitioner
+- Open to DevOps Engineer, Platform Engineer, Cloud Engineer and SRE roles (on-site, hybrid or remote)
 
 ## Tech stack
 
@@ -47,24 +47,23 @@ I build and secure delivery pipelines: containerized applications, CI/CD automat
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=expo&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
-
 ## Experience
 
-**DevOps Intern, [CodeAlpha](https://www.codealpha.tech)** · Remote · Oct 2026 - present
+**DevOps Engineer & Developer (Freelance)** · Self-employed · 2021 - 2026
+- Deployed and maintained eight production SaaS and e-commerce platforms for clients in Saudi Arabia, Kuwait and Egypt ([see below](#production-client-work))
+- Handled deployment, hosting and production troubleshooting (Linux, DNS, HTTPS, MySQL, Docker), payment integrations (MyFatoorah, Tabby, Tamara) and app-store releases
+
+**DevOps Intern, [CodeAlpha](https://www.codealpha.tech)** · Remote · Oct 2026 - Nov 2026
 - Jenkins Remoting with x86_64 and ARM64 agents over JNLP4/TLS, configured as code (JCasC + Job DSL)
 - Java 21 build automation with Gradle, JUnit 5, a JaCoCo coverage gate and a GitHub Actions → GHCR pipeline
 - Hardened Nginx container with health checks, monitoring and 13 automated smoke tests
 - Azure Pipelines CI/CD to ACR and App Service with Bicep
 
-**Freelance Developer & DevOps Support** · Self-employed · 2021 - present
-- Built and run eight production SaaS and e-commerce platforms for clients in Saudi Arabia, Kuwait and Egypt ([see below](#production-client-work))
-- Deployment, hosting and production troubleshooting (Linux, DNS, HTTPS, MySQL, Docker), payment integrations (MyFatoorah, Tabby, Tamara) and app-store releases
-
 ## Featured work
 
-**[Aegis: end-to-end DevSecOps platform](https://github.com/ahmedelgmal310/aegis-devsecops)**
+**[Aegis: CI/CD and GitOps delivery platform](https://github.com/ahmedelgmal310/aegis-devsecops)**
 
-Secures the full path from `git push` to a running pod. Code passes secret scanning, SAST, SCA and IaC gates; the image is built multi-arch, scanned, signed with Sigstore (keyless) and ships with a signed SBOM, a signed vulnerability report and SLSA provenance. In the cluster, Kyverno admits only images signed by this pipeline with no critical CVEs, Falco detects attacker behaviour at runtime, secrets are sealed, and Argo CD deploys from Git. When Falco catches an attack, a Go incident responder isolates the pod within milliseconds, preserves the evidence and lets Kubernetes replace it. Every release the pipeline attacks its own cluster and fails if anything gets through.
+Takes an application from `git push` to a running pod on Kubernetes. GitHub Actions runs the tests and quality gates, builds a multi-arch image with Docker, scans it, signs it with cosign and attaches an SBOM. Argo CD deploys it from Git (GitOps), Kyverno admits only images built and signed by this pipeline, and Falco watches the running pods. Every release is verified end to end in CI before it is promoted.
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 ![Sigstore](https://img.shields.io/badge/Sigstore_cosign-2B2D42?style=flat&logo=sigstore&logoColor=white)
@@ -72,50 +71,23 @@ Secures the full path from `git push` to a running pod. Code passes secret scann
 ![Falco](https://img.shields.io/badge/Falco-00AEC7?style=flat&logo=falco&logoColor=white)
 ![Argo CD](https://img.shields.io/badge/Argo_CD-EF7B4D?style=flat&logo=argo&logoColor=white)
 ![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat&logo=aqua&logoColor=white)
-![OWASP ZAP](https://img.shields.io/badge/OWASP_ZAP-000000?style=flat&logo=owasp&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 
-**[Sieve: vulnerability triage that tells you what to fix first](https://github.com/ahmedelgmal310/sieve)** · [live dashboard](https://ahmedelgmal310.github.io/sieve/)
-
-A daily pipeline that scans seven container images with Trivy and ranks every finding by real-world exploitation: CISA KEV (exploited in the wild), FIRST EPSS (probability of exploitation) and OpenVEX decisions for what does not affect us. Each vulnerability gets a priority and a remediation deadline measured from the day it was first seen. On the first run, 21,864 raw findings came down to 32 vulnerabilities that matter (99.5% of the noise removed). Sieve opens and closes one GitHub issue per urgent vulnerability, uploads SARIF to code scanning, publishes the dashboard on GitHub Pages, exports every suppression as OpenVEX, and blocks releases of my own images on any P0. Written in Go with zero third-party dependencies and 94% test coverage.
-
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
-![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat&logo=aqua&logoColor=white)
-![CISA KEV](https://img.shields.io/badge/CISA_KEV-B91C1C?style=flat)
-![EPSS](https://img.shields.io/badge/EPSS-C2410C?style=flat)
-![OpenVEX](https://img.shields.io/badge/OpenVEX-0369A1?style=flat)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
-
-**Platform engineering**: each project is proven end to end in CI, and the numbers below come from those runs.
+**Platform projects**: each one is proven end to end in CI, and the numbers come from those runs.
 
 | Project | What it proves |
 |---|---|
-| [Lighthouse: SLO-based observability](https://github.com/ahmedelgmal310/sre-observability-slo) | Three Go services instrumented with OpenTelemetry, with metrics, traces and logs linked by trace ID in Prometheus, Tempo, Loki and Grafana. Multi-window burn-rate alerts on a 99.9% SLO. A chaos test injects errors two hops deep, and CI checks that the page fires (at 120 s, burn rate 26.6x). |
+| [Golden-path CI](https://github.com/ahmedelgmal310/golden-path-ci) | A versioned library of 6 reusable GitHub Actions workflows (Go, Node, container image, Helm, Terraform, security baseline). 78 lines of consumer YAML reuse 1,649 lines of library. Images are signed with cosign and get an SBOM and SLSA provenance. A meta-test proves the gates bite: a planted key, a vulnerable base image and unformatted Terraform each fail at the expected step (3/3). A warm cache makes the Go pipeline 64% faster. |
 | [Progressive delivery on Kubernetes](https://github.com/ahmedelgmal310/k8s-progressive-delivery) | Argo Rollouts canary (10% → 50% → 100%) gated by Prometheus analysis. CI ships a good release (promoted in 164 s) and a bad one, which is aborted in 49 s and fully rolled back in 56 s with zero errors afterwards. GitOps promotion dev → staging → prod; images are signed with cosign. |
 | [Terraform AWS platform](https://github.com/ahmedelgmal310/terraform-aws-platform) | Five reusable modules (VPC, secure S3, GitHub OIDC, RDS Postgres, ECS Fargate) and three environments. CI applies and destroys 74 resources on LocalStack, and 40 OPA policy rules check every plan. Checkov: 272 passed, 0 failed. |
-| [Ansible Linux hardening](https://github.com/ahmedelgmal310/ansible-linux-hardening) | Eight roles mapped to 92 CIS controls, tested with Molecule on Ubuntu, Debian 12/13, Rocky and Alma. The Lynis score rises from 62 to 83, and a second run makes 0 changes. Real SSH logins verify the result. |
-| [Vault secrets platform](https://github.com/ahmedelgmal310/vault-secrets-platform) | A 3-node Vault cluster on Kubernetes, configured with Terraform. The service holds no stored secrets: dynamic PostgreSQL credentials expire after 20 s and are rotated, and short-lived TLS certificates come from Vault PKI. External Secrets Operator syncs a rotated secret in 4.3 s. 22/22 access tests pass, and a new leader is elected 6.5 s after the active node is lost. |
 | [Kubernetes disaster recovery](https://github.com/ahmedelgmal310/k8s-disaster-recovery) | Velero and CloudNativePG with continuous WAL archiving to encrypted object storage. Three DR drills run in CI and every row is verified after restore: a deleted namespace (RTO 41 s), a `DELETE` without `WHERE` recovered to a point in time (RTO 51 s, RPO 0.06 s), and total cluster loss (RTO 186 s). |
-| [Zero-trust service mesh](https://github.com/ahmedelgmal310/zero-trust-service-mesh) | Istio with strict mTLS, identity-based authorization (method and path), JWT at the ingress, NetworkPolicies and egress control. A 21-case policy conformance matrix runs in CI. Certificates rotate every 2 minutes with 0 failed requests, and the mesh adds about 1 ms of latency. |
-| [Event-driven autoscaling](https://github.com/ahmedelgmal310/k8s-event-driven-autoscaling) | KEDA scales an API on CPU and requests/s, and scales a Redis Streams worker from zero. The API went 2 → 7 → 2 replicas over 54,000 requests with 0 failures. A burst of 4,000 jobs was drained in 13.7 s, then the workers went back to 0. A node drain under load dropped no requests. |
-| [Golden-path CI](https://github.com/ahmedelgmal310/golden-path-ci) | A versioned library of 6 reusable GitHub Actions workflows (Go, Node, container image, Helm, Terraform, security baseline). 78 lines of consumer YAML reuse 1,649 lines of library. Images are signed with cosign and get an SBOM and SLSA provenance. A meta-test proves the gates bite: a planted key, a vulnerable base image and unformatted Terraform each fail at the expected step (3/3). A warm cache makes the Go pipeline 64% faster. |
-| [Zero-downtime database migrations](https://github.com/ahmedelgmal310/zero-downtime-migrations) | A column split with expand → backfill → contract across three app versions, including a rollback in the middle, under constant load: 11,229 requests with 0 failed and a worst p95 of 1.8 ms. 200,329 rows backfilled in batches at 4,703 rows/s. No acknowledged write was lost, and a guard refuses the contract while old pods are still running. |
-| [Multi-tenant Kubernetes](https://github.com/ahmedelgmal310/k8s-multi-tenancy) | Tenant onboarding with Kyverno: each team gets RBAC, quotas, a LimitRange and default-deny network policies in under a second. A 63-case tenancy conformance matrix passes, and each denial is checked to come from the right layer. A noisy neighbour is capped by quota while the other team serves 300 requests with 0 failures. A deleted policy comes back in 0.13 s. |
-| [Crossplane self-service platform](https://github.com/ahmedelgmal310/crossplane-self-service) | One `AppEnvironment` resource gives a team a namespace with quota and network policy, a PostgreSQL database with its credentials, and the app itself. A small environment is ready in 12.2 s, and one with a database in 31 s. Invalid requests are rejected at admission (5/5). Drift is corrected in 0.1 to 4.3 s, and deleting the environment leaves 0 orphaned resources. Tuning Crossplane's watch circuit breaker halved the time to ready. |
 
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
-![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat&logo=opentelemetry&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 ![Argo Rollouts](https://img.shields.io/badge/Argo_Rollouts-EF7B4D?style=flat&logo=argo&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat&logo=terraform&logoColor=white)
 ![OPA](https://img.shields.io/badge/OPA-7D9199?style=flat&logo=openpolicyagent&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
-![Vault](https://img.shields.io/badge/Vault-FFEC6E?style=flat&logo=vault&logoColor=black)
-![Istio](https://img.shields.io/badge/Istio-466BB0?style=flat&logo=istio&logoColor=white)
 ![Velero](https://img.shields.io/badge/Velero-1F2937?style=flat)
-![KEDA](https://img.shields.io/badge/KEDA-0B5394?style=flat)
-![Kyverno](https://img.shields.io/badge/Kyverno-FF6F00?style=flat)
-![Crossplane](https://img.shields.io/badge/Crossplane-35D0BA?style=flat)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 **[Serverless Image Processing Pipeline](https://github.com/ahmedelgmal310/Serverless-Image-Processing-Pipeline)** · [live demo](https://d3l1cbrdqvb1hz.cloudfront.net)
@@ -136,7 +108,34 @@ Event-driven image service built only from managed AWS services: uploads land in
 | [Java with Gradle](https://github.com/ahmedelgmal310/codealpha_tasks/tree/main/CodeAlpha_Java_Gradle_App) | Gradle 9, version catalog, coverage gate, GitHub Actions → GHCR |
 | [Web server in Docker](https://github.com/ahmedelgmal310/codealpha_tasks/tree/main/CodeAlpha_Docker_Web_Server) | Hardened Nginx container, health checks, monitoring and smoke tests |
 
-Other hands-on work: DevSecOps pipelines with Trivy image scanning and security gates, Kubernetes deployments on kind (probes, rolling updates, ConfigMaps/Secrets, Helm), and AWS networking (VPC, subnets, security groups, EC2, RDS, IAM).
+## More projects
+
+<details>
+<summary>Other platform and security projects</summary>
+
+| Project | What it proves |
+|---|---|
+| [Lighthouse: SLO-based observability](https://github.com/ahmedelgmal310/sre-observability-slo) | Three Go services instrumented with OpenTelemetry, with metrics, traces and logs linked by trace ID in Prometheus, Tempo, Loki and Grafana. Multi-window burn-rate alerts on a 99.9% SLO. A chaos test injects errors two hops deep, and CI checks that the page fires (at 120 s, burn rate 26.6x). |
+| [Ansible Linux hardening](https://github.com/ahmedelgmal310/ansible-linux-hardening) | Eight roles mapped to 92 CIS controls, tested with Molecule on Ubuntu, Debian 12/13, Rocky and Alma. The Lynis score rises from 62 to 83, and a second run makes 0 changes. Real SSH logins verify the result. |
+| [Vault secrets platform](https://github.com/ahmedelgmal310/vault-secrets-platform) | A 3-node Vault cluster on Kubernetes, configured with Terraform. The service holds no stored secrets: dynamic PostgreSQL credentials expire after 20 s and are rotated, and short-lived TLS certificates come from Vault PKI. External Secrets Operator syncs a rotated secret in 4.3 s. 22/22 access tests pass, and a new leader is elected 6.5 s after the active node is lost. |
+| [Zero-trust service mesh](https://github.com/ahmedelgmal310/zero-trust-service-mesh) | Istio with strict mTLS, identity-based authorization (method and path), JWT at the ingress, NetworkPolicies and egress control. A 21-case policy conformance matrix runs in CI. Certificates rotate every 2 minutes with 0 failed requests, and the mesh adds about 1 ms of latency. |
+| [Event-driven autoscaling](https://github.com/ahmedelgmal310/k8s-event-driven-autoscaling) | KEDA scales an API on CPU and requests/s, and scales a Redis Streams worker from zero. The API went 2 → 7 → 2 replicas over 54,000 requests with 0 failures. A burst of 4,000 jobs was drained in 13.7 s, then the workers went back to 0. A node drain under load dropped no requests. |
+| [Zero-downtime database migrations](https://github.com/ahmedelgmal310/zero-downtime-migrations) | A column split with expand → backfill → contract across three app versions, including a rollback in the middle, under constant load: 11,229 requests with 0 failed and a worst p95 of 1.8 ms. 200,329 rows backfilled in batches at 4,703 rows/s. No acknowledged write was lost, and a guard refuses the contract while old pods are still running. |
+| [Multi-tenant Kubernetes](https://github.com/ahmedelgmal310/k8s-multi-tenancy) | Tenant onboarding with Kyverno: each team gets RBAC, quotas, a LimitRange and default-deny network policies in under a second. A 63-case tenancy conformance matrix passes, and each denial is checked to come from the right layer. A noisy neighbour is capped by quota while the other team serves 300 requests with 0 failures. A deleted policy comes back in 0.13 s. |
+| [Crossplane self-service platform](https://github.com/ahmedelgmal310/crossplane-self-service) | One `AppEnvironment` resource gives a team a namespace with quota and network policy, a PostgreSQL database with its credentials, and the app itself. A small environment is ready in 12.2 s, and one with a database in 31 s. Invalid requests are rejected at admission (5/5). Drift is corrected in 0.1 to 4.3 s, and deleting the environment leaves 0 orphaned resources. Tuning Crossplane's watch circuit breaker halved the time to ready. |
+
+**[Sieve: vulnerability triage that tells you what to fix first](https://github.com/ahmedelgmal310/sieve)** · [live dashboard](https://ahmedelgmal310.github.io/sieve/)
+
+A daily pipeline that scans seven container images with Trivy and ranks every finding by real-world exploitation: CISA KEV (exploited in the wild), FIRST EPSS (probability of exploitation) and OpenVEX decisions for what does not affect us. Each vulnerability gets a priority and a remediation deadline measured from the day it was first seen. On the first run, 21,864 raw findings came down to 32 vulnerabilities that matter (99.5% of the noise removed). Sieve opens and closes one GitHub issue per urgent vulnerability, uploads SARIF to code scanning, publishes the dashboard on GitHub Pages, exports every suppression as OpenVEX, and blocks releases of my own images on any P0. Written in Go with zero third-party dependencies and 94% test coverage.
+
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat&logo=aqua&logoColor=white)
+![CISA KEV](https://img.shields.io/badge/CISA_KEV-B91C1C?style=flat)
+![EPSS](https://img.shields.io/badge/EPSS-C2410C?style=flat)
+![OpenVEX](https://img.shields.io/badge/OpenVEX-0369A1?style=flat)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+
+</details>
 
 ## Production client work
 
